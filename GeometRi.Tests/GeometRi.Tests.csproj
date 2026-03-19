@@ -80,6 +80,7 @@
     <Compile Include="ConvexPolyhedronTest.cs" />
     <Compile Include="AABBTest.cs" />
     <Compile Include="Vector3dTest.cs" />
+    <Compile Include="TriangleIntersectionWithLineSegmentTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
