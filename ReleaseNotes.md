@@ -1,6 +1,11 @@
 # GeometRi
 ## Release notes
 
+### 1.5.0.8 (19/03/2026)
+* Fixed triangle-segment intersection.
+* Union of two AABB.
+* Small optimizations.
+
 ### 1.5.0.7 (17/10/2025)
 * Optimization of polyhedron distance/intersection calculations.
 * Optimization of circle distance calculations.

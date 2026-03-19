@@ -410,6 +410,7 @@ Axis aligned 3D box, can be degenerated with one or more dimensions equal 0. Def
 * __V1/V2/V3__ - orientation vectors of the box
 * __Orientation__ - box orientation
 * __P1/P2/P3/P4/P5/P6/P7/P8__ - corner points of the box
+* __Xmin/Xmax/Ymin/Ymax/Zmin/Zmax__ - boundaries of the AABB
 * __ListOfPoints__ - list of corner points of the box
 * __ListOfTriangles__ - list of triangles forming the box's surface
 * __ListOfPlanes__ - list of planes forming the box's surface
@@ -417,10 +418,11 @@ Axis aligned 3D box, can be degenerated with one or more dimensions equal 0. Def
 * __Area__ - area of the box
 * __Volume__ - volume of the box
 ### Methods
+* __Union__ - union of two AABB
 * __DistanceTo__ - shortest distance to point, AABB, circle or sphere
 * __ClosestPoint__ - calculates the point on the AABB closest to given point
-* __Intersects__ - intersection check with AABB, box, circle, tetrahedron or triangle
-* __IntersectionWith__ - intersection of box with line, ray or segment
+* __Intersects__ - intersection check with AABB, box, circle, or triangle
+* __IntersectionWith__ - intersection of box with AABB, line, ray or segment
 * __Translate__ - translate box by vector
 * __Rotate__ - rotate box around origin or other point
 * __Reflect__ - reflect box in point, line or plane

@@ -15,12 +15,14 @@ Compatible with .Net Framework 4.6.1, .Net Standard 2.0, .Net Core 3.1 and .Net 
     <PackageProjectUrl>https://github.com/RiSearcher/GeometRi.CSharp</PackageProjectUrl>
     <Version>1.5.0.8</Version>
     <PackageTags>computational geometry math 3D</PackageTags>
-    <PackageReleaseNotes>Optimization of polyhedron distance/intersection calculations.
-Optimization of circle distance calculations.</PackageReleaseNotes>
+    <PackageReleaseNotes>Fixed triangle-segment intersection.
+Union of two AABB.
+Small optimizations.</PackageReleaseNotes>
     <PackageLicenseUrl></PackageLicenseUrl>
     <RepositoryUrl>https://github.com/RiSearcher/GeometRi.CSharp</RepositoryUrl>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <FileVersion>1.5.0.8</FileVersion>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -41,6 +43,10 @@ Optimization of circle distance calculations.</PackageReleaseNotes>
     <None Include="..\LICENSE.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
 

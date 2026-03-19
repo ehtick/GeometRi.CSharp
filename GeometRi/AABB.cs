@@ -577,6 +577,23 @@ namespace GeometRi
         }
 
         /// <summary>
+        /// Intersection check between circle and box
+        /// </summary>
+        public bool Intersects(Circle3d c)
+        {
+            //if (c.Center.IsInside(this)) return true;
+            double dist = c._point.DistanceTo(this);
+            if (dist > c.R) return false;
+            if (dist < GeometRi3D.Tolerance) return true;
+
+            foreach (Triangle triangle in ListOfTriangles)
+            {
+                if (c.Intersects(triangle)) return true;
+            }
+            return false;
+        }
+
+        /// <summary>
         /// Check if AABB is located inside box.
         /// </summary>
         public bool IsInside(Box3d box)
@@ -829,22 +846,7 @@ namespace GeometRi
             return min_dist;
         }
 
-        /// <summary>
-        /// Intersection check between circle and box
-        /// </summary>
-        public bool Intersects(Circle3d c)
-        {
-            //if (c.Center.IsInside(this)) return true;
-            double dist = c._point.DistanceTo(this);
-            if (dist > c.R) return false;
-            if (dist < GeometRi3D.Tolerance) return true;
 
-            foreach (Triangle triangle in ListOfTriangles)
-            {
-                if (c.Intersects(triangle)) return true;
-            }
-            return false;
-        }
 
         internal override int _PointLocation(Point3d p)
         {
